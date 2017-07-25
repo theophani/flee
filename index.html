@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Shoo!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<style>
+body {
+	font-size: 1em;
+	max-width: 30em;
+	margin: 3em auto;
+}
+span.😂 {
+	border: dotted 1px #ddd;
+	margin: -1px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>A title in an H1</h1>
+
+<p>
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	This sentence has a bunch of      extra       spaces.
+</p>
+
+<div>
+	<p>
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+	</p>
+</div>
+
+<script>
+
+	var textNodetoSpan = function (textNode) {
+		var replacement = document.createElement("span")
+		replacement.className = "😂"
+		replacement.innerText = textNode.textContent.replace(/\s+/g, " ")
+		return replacement
+	}
+
+	var replaceWithSpan = function (textNode) {
+		textNode.replaceWith(textNodetoSpan(textNode))
+	}
+
+	var notEmpty = function (textNode) {
+		return textNode.textContent.replace(/\s/g, "") !== "";
+	}
+
+	var isTextNode = function (childNode) {
+	 return childNode.nodeName === "#text"
+	}
+
+	var ifNonEmptyTextNode = function (callbackIfTrue) {
+		return function (childNode) {
+			if (isTextNode(childNode) && notEmpty(childNode)) {
+				callbackIfTrue(childNode)
+			}
+		}
+	}
+
+	var isNonDisplayTag = function (element) {
+		return ["SCRIPT"].indexOf(element.tagName) > -1
+	}
+
+	var elements = document.querySelectorAll("body *")
+
+	elements.forEach(function (element) {
+		if (isNonDisplayTag(element)) {
+			return;
+		}
+		element.childNodes.forEach(ifNonEmptyTextNode(replaceWithSpan));
+	});
+
+</script>
+
+</body>
+</html>
