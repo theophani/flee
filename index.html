@@ -64,6 +64,10 @@ span.😂 {
 	 return childNode.nodeName === "#text"
 	}
 
+	var isNonEmptyTextNode = function (childNode) {
+		return isTextNode(childNode) && notEmpty(childNode)
+	}
+
 	var isNonDisplayTag = function (element) {
 		return ["SCRIPT"].indexOf(element.tagName) > -1
 	}
@@ -76,8 +80,7 @@ span.😂 {
 		}
 
 		Array.prototype.filter
-			.call(element.childNodes, isTextNode)
-			.filter(notEmpty)
+			.call(element.childNodes, isNonEmptyTextNode)
 			.forEach(replaceWithSpan);
 
 	});
