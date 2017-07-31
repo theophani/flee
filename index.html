@@ -7,14 +7,124 @@
 
 <style>
 body {
-	font-size: 1em;
-	max-width: 30em;
+	font-size: 2em;
+	max-width: 27em;
+	padding: 0 1em;
 	margin: 3em auto;
+	cursor: default !important;
 }
+
 span.😂 {
-	border: dotted 1px #ddd;
-	margin: -1px;
+	position: relative;
+	cursor: default;
 }
+
+a span.😂 {
+	cursor: pointer;
+}
+
+span.😂:after {
+	z-index: -1;
+	position: absolute;
+	padding: 1em;
+	left: -1.75em;
+	top: -1.5em;
+	display: block;
+	content: "";
+	width: 2em;
+	height: 2em;
+	border-radius: 100%
+}
+
+span.😂:hover {
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+span.😂:hover {
+	color: yellow;
+}
+
+span.😂:hover:after {
+	background-color: black;
+}
+
+span.😂.aa:hover { animation-name: aa; }
+span.😂.ab:hover { animation-name: ab; }
+span.😂.ac:hover { animation-name: ac; }
+span.😂.ad:hover { animation-name: ad; }
+span.😂.ae:hover { animation-name: ae; }
+span.😂.af:hover { animation-name: af; }
+span.😂.ba:hover { animation-name: ba; }
+span.😂.bb:hover { animation-name: bb; }
+span.😂.bc:hover { animation-name: bc; }
+span.😂.bd:hover { animation-name: bd; }
+span.😂.be:hover { animation-name: be; }
+span.😂.bf:hover { animation-name: bf; }
+span.😂.ca:hover { animation-name: ca; }
+span.😂.cb:hover { animation-name: cb; }
+span.😂.cc:hover { animation-name: cc; }
+span.😂.cd:hover { animation-name: cd; }
+span.😂.ce:hover { animation-name: ce; }
+span.😂.cf:hover { animation-name: cf; }
+span.😂.da:hover { animation-name: da; }
+span.😂.db:hover { animation-name: db; }
+span.😂.dc:hover { animation-name: dc; }
+span.😂.dd:hover { animation-name: dd; }
+span.😂.de:hover { animation-name: de; }
+span.😂.df:hover { animation-name: df; }
+span.😂.ea:hover { animation-name: ea; }
+span.😂.eb:hover { animation-name: eb; }
+span.😂.ec:hover { animation-name: ec; }
+span.😂.ed:hover { animation-name: ed; }
+span.😂.ee:hover { animation-name: ee; }
+span.😂.ef:hover { animation-name: ef; }
+span.😂.fa:hover { animation-name: fa; }
+span.😂.fb:hover { animation-name: fb; }
+span.😂.fc:hover { animation-name: fc; }
+span.😂.fd:hover { animation-name: fd; }
+span.😂.fe:hover { animation-name: fe; }
+span.😂.ff:hover { animation-name: ff; }
+
+@keyframes aa { from { left:0;top:0 } to { left:  1em; top:  1em; } }
+@keyframes ab { from { left:0;top:0 } to { left:  1em; top:  2em; } }
+@keyframes ac { from { left:0;top:0 } to { left:  1em; top:  3em; } }
+@keyframes ad { from { left:0;top:0 } to { left:  1em; top: -1em; } }
+@keyframes ae { from { left:0;top:0 } to { left:  1em; top: -2em; } }
+@keyframes af { from { left:0;top:0 } to { left:  1em; top: -3em; } }
+@keyframes ba { from { left:0;top:0 } to { left:  2em; top:  1em; } }
+@keyframes bb { from { left:0;top:0 } to { left:  2em; top:  2em; } }
+@keyframes bc { from { left:0;top:0 } to { left:  2em; top:  3em; } }
+@keyframes bd { from { left:0;top:0 } to { left:  2em; top: -1em; } }
+@keyframes be { from { left:0;top:0 } to { left:  2em; top: -2em; } }
+@keyframes bf { from { left:0;top:0 } to { left:  2em; top: -3em; } }
+@keyframes ca { from { left:0;top:0 } to { left:  3em; top:  1em; } }
+@keyframes cb { from { left:0;top:0 } to { left:  3em; top:  2em; } }
+@keyframes cc { from { left:0;top:0 } to { left:  3em; top:  3em; } }
+@keyframes cd { from { left:0;top:0 } to { left:  3em; top: -1em; } }
+@keyframes ce { from { left:0;top:0 } to { left:  3em; top: -2em; } }
+@keyframes cf { from { left:0;top:0 } to { left:  3em; top: -3em; } }
+@keyframes da { from { left:0;top:0 } to { left: -1em; top:  1em; } }
+@keyframes db { from { left:0;top:0 } to { left: -1em; top:  2em; } }
+@keyframes dc { from { left:0;top:0 } to { left: -1em; top:  3em; } }
+@keyframes dd { from { left:0;top:0 } to { left: -1em; top: -1em; } }
+@keyframes de { from { left:0;top:0 } to { left: -1em; top: -2em; } }
+@keyframes df { from { left:0;top:0 } to { left: -1em; top: -3em; } }
+@keyframes ea { from { left:0;top:0 } to { left: -2em; top:  1em; } }
+@keyframes eb { from { left:0;top:0 } to { left: -2em; top:  2em; } }
+@keyframes ec { from { left:0;top:0 } to { left: -2em; top:  3em; } }
+@keyframes ed { from { left:0;top:0 } to { left: -2em; top: -1em; } }
+@keyframes ee { from { left:0;top:0 } to { left: -2em; top: -2em; } }
+@keyframes ef { from { left:0;top:0 } to { left: -2em; top: -3em; } }
+@keyframes fa { from { left:0;top:0 } to { left: -3em; top:  1em; } }
+@keyframes fb { from { left:0;top:0 } to { left: -3em; top:  2em; } }
+@keyframes fc { from { left:0;top:0 } to { left: -3em; top:  3em; } }
+@keyframes fd { from { left:0;top:0 } to { left: -3em; top: -1em; } }
+@keyframes fe { from { left:0;top:0 } to { left: -3em; top: -2em; } }
+@keyframes ff { from { left:0;top:0 } to { left: -3em; top: -3em; } }
+
 </style>
 
 </head>
@@ -23,23 +133,23 @@ span.😂 {
 <h1>A title in an H1</h1>
 
 <p>
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
-	A paragraph with a <a href="/elsewhere">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
+	A paragraph with a <a href="./index.html">link</a> and <strong>something in bold</strong>.
 	This sentence has a bunch of      extra       spaces.
 </p>
 
 <div>
 	<p>
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
-		A paragraph in a div with a <a href="/elsewhere">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
+		A paragraph in a div with a <a href="./index.html">link</a> and <em>something in italics</em>.
 	</p>
 </div>
 
@@ -54,6 +164,38 @@ span.😂 {
 
 	var replaceWithSpan = function (textNode) {
 		textNode.replaceWith(textNodetoSpan(textNode))
+	}
+
+	var randomDistance = function () {
+		var val = Math.ceil(Math.random() * 3) + "em"
+		return Math.random() > 0.5 ? val : "-" + val
+	}
+
+	var randomAnimationClassName = function () {
+		var variants = ["a", "b", "c", "d", "e", "f"]
+		var i = Math.floor(Math.random() * variants.length)
+		var j = Math.floor(Math.random() * variants.length)
+		return variants[i] + variants[j]
+	}
+
+	var characterInSpan = function (character) {
+		var wrapped = document.createElement("span")
+		wrapped.className = ["😂", randomAnimationClassName()].join(" ")
+		wrapped.innerText = character
+		wrapped.style.left = randomDistance()
+		wrapped.style.top = randomDistance()
+		return wrapped
+	}
+
+	var replaceAllCharactersWithSpan = function (textNode) {
+		var characters = textNode.textContent.replace(/\s+/g, " ")
+		var containerElement = document.createElement("span")
+
+		characters.split("").forEach(function (character) {
+			containerElement.appendChild(characterInSpan(character))
+		})
+
+		textNode.replaceWith(containerElement);
 	}
 
 	var notEmpty = function (textNode) {
@@ -72,18 +214,68 @@ span.😂 {
 		return ["SCRIPT"].indexOf(element.tagName) > -1
 	}
 
+	var onRandomDelay = function (callback) {
+		return function () {
+			var callbackParams = arguments
+			console.log(arguments)
+			setTimeout(function () { callback.apply(this, callbackParams) }, Math.ceil(Math.random() * 5000))
+		}
+	}
+
 	var elements = document.querySelectorAll("body *")
 
-	elements.forEach(function (element) {
-		if (isNonDisplayTag(element)) {
-			return;
-		}
+	var flee = function () {
+		elements.forEach(function (element) {
+			if (isNonDisplayTag(element)) {
+				return;
+			}
 
-		Array.prototype.filter
-			.call(element.childNodes, isNonEmptyTextNode)
-			.forEach(replaceWithSpan);
+			Array.prototype.filter
+				.call(element.childNodes, isNonEmptyTextNode)
+				.forEach(onRandomDelay(replaceAllCharactersWithSpan));
 
-	});
+		});
+	}
+
+	var showButton = function () {
+		var styleSheet = document.createElement("style")
+		styleSheet.innerText = "" +
+			"html {" +
+			"	position: relative;" +
+			"	height: 100%;" +
+			"}" +
+			"div.button {" +
+			"	position: absolute;" +
+			"	left: 50%;" +
+			"	top: 50%;" +
+			"	margin-left: -5em;" +
+			"	line-height: 1em;" +
+			"	margin-top: -1.5em;" +
+			"	background-color: white;" +
+			"	padding: 1em 0;" +
+			"	border: solid 3px black;" +
+			"	border-radius: 1em;" +
+			"	text-transform: uppercase;" +
+			"	font-family: sans-serif;" +
+			"	letter-spacing: 0.1em;" +
+			"	width: 8em;" +
+			"	text-align: center;" +
+			"}";
+		document.body.appendChild(styleSheet)
+
+		var button = document.createElement("div")
+		button.innerText = "scatter"
+		button.className = "button"
+		document.body.appendChild(button)
+
+		button.addEventListener("click", function() {
+			document.body.removeChild(button)
+			document.body.removeChild(styleSheet)
+			flee()
+		});
+	}
+
+	flee();
 
 </script>
 
